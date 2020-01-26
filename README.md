@@ -9,7 +9,7 @@
 - kubectl apply -f 1.pod.yaml
 - kubectl get all
 - kubectl delete -f 1.pod.yaml
-- kubectl describe pod <pod-name>
+- kubectl describe pod {pod-name}
 
 ```yaml
 apiVersion: 'v1'
