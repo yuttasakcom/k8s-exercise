@@ -27,6 +27,8 @@ spec:
 
 ## SERVICE
 
+- kubectl describe svc service-webapp
+
 ```yaml
 kind: Service
 apiVersion: v1
