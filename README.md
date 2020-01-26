@@ -6,7 +6,8 @@
 
 ## POD
 
-> kubectl apply -f 1.pod.yaml
+- kubectl apply -f 1.pod.yaml
+- kubectl get all
 
 ```yaml
 apiVersion: 'v1'
