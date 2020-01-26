@@ -8,6 +8,8 @@
 
 - kubectl apply -f 1.pod.yaml
 - kubectl get all
+- kubectl delete -f 1.pod.yaml
+- kubectl describe pod <pod-name>
 
 ```yaml
 apiVersion: 'v1'
@@ -17,5 +19,5 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: yuttasakcom/node-echoserver
+      image: jmalloc/echo-server
 ```

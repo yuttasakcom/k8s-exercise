@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: yuttasakcom/node-echoserver
+      image: jmalloc/echo-server
