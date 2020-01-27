@@ -11,6 +11,7 @@
 - kubectl get all
 - kubectl delete -f 1.pod.yaml
 - kubectl describe pod {pod-name}
+- kubectl get po --show-labels
 
 ```yaml
 apiVersion: v1
