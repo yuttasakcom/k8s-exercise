@@ -7,4 +7,4 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: jmalloc/echo-server
+      image: richardchesterwood/k8s-fleetman-webapp-angular:release0

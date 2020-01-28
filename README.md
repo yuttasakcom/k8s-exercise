@@ -47,6 +47,9 @@ spec:
   type: NodePort
 ```
 
+- kubectl exec -it {pod-name} sh
+  - nslookup database
+
 ```yaml
 apiVersion: v1
 kind: Pod
