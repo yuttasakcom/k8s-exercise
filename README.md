@@ -6,6 +6,8 @@
 - [SERVICE](#SERVICE)
 - [Replicaset](#Replicaset)
 - [Deployment](#Deployment)
+- [Namespace](#Namespace)
+- [Persitante](#Persitante)
 
 ## POD
 
@@ -159,6 +161,44 @@ spec:
 - kubectl get namespace
 - kubectl get po -n kube-system
 
-```
+## Persitante
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  selector:
+    matchLabels:
+      app: mongodb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo:3.6.5-jessie
+          volumeMounts:
+            - name: mongo-persistent-storage
+              mountPath: /data/db
+      volumes:
+        - name: mongo-persistent-storage
+          hostPath:
+            path: /mnt/some/directory/structure/
+            type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-mongodb
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - name: mongoport
+      port: 27017
+  type: ClusterIP
 ```
