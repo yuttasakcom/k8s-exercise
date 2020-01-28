@@ -7,7 +7,7 @@
 - [Replicaset](#Replicaset)
 - [Deployment](#Deployment)
 - [Namespace](#Namespace)
-- [Persitante](#Persitante)
+- [Persitante-Volume](#Persitante-Volume)
 
 ## POD
 
@@ -161,7 +161,7 @@ spec:
 - kubectl get namespace
 - kubectl get po -n kube-system
 
-## Persitante
+## Persitante-Volume
 
 ```yaml
 apiVersion: apps/v1
