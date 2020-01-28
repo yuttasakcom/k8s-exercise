@@ -121,3 +121,12 @@ spec:
       nodePort: 30080
   type: NodePort
 ```
+
+## Namespace
+
+- kubectl get namespace
+- kubectl get po -n kube-system
+
+```
+
+```
