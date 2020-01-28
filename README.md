@@ -202,3 +202,36 @@ spec:
       port: 27017
   type: ClusterIP
 ```
+
+## Persistant-Volume-Claim
+
+- kubectl get pv
+- kubectl get pvc
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+spec:
+  storageClassName: mylocalstorage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-storage
+spec:
+  storageClassName: mylocalstorage
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: '/mnt/some/directory/structure/'
+    type: DirectoryOrCreate
+```
